@@ -2,10 +2,18 @@
 
 namespace Controllers;
 
+use Core\View;
+
 class Index
 {
+    protected $views;
+
+    public function __construct(){
+        $this->view = new View();
+    }
+
     public function index(){
-        echo 'index controller index action';
+        $this->view->render('index_index_page');
     }
 
 }
